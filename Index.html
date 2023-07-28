@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header></header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível 
+            <strong class="titulo-destaque">com um Back-end de qualidade!</strong>
+            </h1>
+            <p class="apresentacao__conteudo__texto">Olá! Sou Julio Cezar, desenvolvedor Back-end com especialidade em Java, Spring Boot e MySQL.</p> <br>
+            <div class="apresentacao__links">
+                <a class="apresentacao__links__link" href="https://instagram.com/julio.czg">Instagram</a>
+                <a class="apresentacao__links__link" href="https://github.com/Julioczg">Github</a>
+                
+            </div>   <br>
+            <button class="botao" onclick="playRandomAudio()">Herta</button>
+            
+            <audio id="audio1" src="static_audio_ja_kuru1.mp3"></audio>
+            <audio id="audio2" src="static_audio_ja_kuru2.mp3"></audio>
+            <audio id="audio3" src="static_audio_ja_kuruto.mp3"></audio>
+        
+            <script>
+                // Array com os IDs dos áudios disponíveis
+                var availableAudios = ["audio1", "audio2", "audio3"];
+
+                function playRandomAudio() {
+                    // Escolhe aleatoriamente um ID de áudio do array disponível
+                    var randomIndex = Math.floor(Math.random() * availableAudios.length);
+                    var randomAudioId = availableAudios[randomIndex];
+
+                    var audio = document.getElementById(randomAudioId);
+                    audio.play();
+
+                    var gifContainer = document.getElementById("gifContainer");
+                    gifContainer.classList.add("visible"); // Adiciona a classe "visible" ao contêiner do GIF somente após o início da animação
+
+                    // Remova a classe "visible" após um intervalo curto de tempo para ocultar o GIF após a animação terminar
+                    setTimeout(function() {
+                        gifContainer.classList.remove("visible");
+                    }, 3000); // Tempo em milissegundos (3 segundos neste exemplo, ajuste conforme necessário)
+
+                }
+            </script>
+
+        </section>
+        <div id="gifContainer" class="gif-container">
+           <img src="hertaa1.gif" alt="Gif da Herta rodando">
+        </div>
+      
+    </main>
+    <footer></footer>
+</body>
+</html>

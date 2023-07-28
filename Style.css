@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #F6F6F6;
+}
+
+.titulo-destaque {
+    color: #9d88d3; /*#22D4FD*/
+}
+
+.apresentacao {
+  margin: 10% 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.apresentacao__conteudo {
+ width: 615px;
+ height: 100vh;
+   
+    
+}
+
+.apresentacao__conteudo__titulo {
+font-size: 36px;
+font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apresentacao__links__link {
+    background-color: #9d88d3;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.botao {
+    background-color: #9d88d3;
+    width: 202px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+    .gif-container {
+        position: absolute;
+        top: 35%;
+        right: 100%; /* Posiciona o GIF inicialmente à direita da tela */
+        opacity: 100; /* Inicia o GIF com opacidade 0 (invisível) */
+        
+    }
+    
+    @keyframes moveInFromRight {
+        0% {
+            right: -50%; /* O GIF aparece na tela pela direita */
+            opacity: 100; /* O GIF fica invisível */
+        }
+        100% {
+            right: 100%; /* O GIF desaparece pela esquerda (100% da largura da tela) */
+            opacity: 100; /* O GIF fica totalmente visível */
+        }
+    }
+
+    .gif-container.visible {
+        display: block; /* Torna o GIF visível quando possui a classe "visible" */
+        animation: moveInFromRight 2.5s linear; /* Animação */
+    }
